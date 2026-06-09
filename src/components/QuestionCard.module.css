@@ -1,0 +1,133 @@
+.card {
+  background: #ffffff;
+  border: 1px solid #f4c2d8;
+  border-radius: 24px;
+  padding: 3rem 2.5rem 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4537e;
+  margin-bottom: 1.25rem;
+}
+
+.heartRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.heartPulse {
+  animation: hpulse 1.5s ease-in-out infinite;
+}
+
+@keyframes hpulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.22); }
+}
+
+.question {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #3d1a2b;
+  line-height: 1.35;
+  margin-bottom: 0.5rem;
+}
+
+.sub {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 13px;
+  color: #b07090;
+  margin-bottom: 2rem;
+  letter-spacing: 0.03em;
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  background: #f4c2d8;
+  margin: 0 auto 2rem;
+}
+
+.btnRow {
+  position: relative;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnYes {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 13px 40px;
+  border-radius: 50px;
+  background: #d4537e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  position: relative;
+  z-index: 1;
+}
+
+.btnYes:hover {
+  background: #bf3f6a;
+  transform: scale(1.05);
+}
+
+.btnYes:active {
+  transform: scale(0.97);
+}
+
+.btnNo {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  padding: 11px 26px;
+  border-radius: 50px;
+  background: #fff0f5;
+  color: #b07090;
+  border: 1px solid #f4c2d8;
+  cursor: pointer;
+  transition: font-size 0.2s, padding 0.2s, opacity 0.3s;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.btnNo.flee {
+  animation: flee 0.22s ease-out both;
+}
+
+@keyframes flee {
+  0%   { transform: scale(1) rotate(0deg); }
+  50%  { transform: scale(0.88) rotate(-6deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.mood {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: #c47a9a;
+  margin-top: 1.25rem;
+  min-height: 20px;
+  letter-spacing: 0.02em;
+  transition: opacity 0.25s ease;
+}

@@ -1,0 +1,17 @@
+.petal {
+  position: absolute;
+  pointer-events: none;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateY(110vh) rotate(400deg);
+    opacity: 0;
+  }
+}
